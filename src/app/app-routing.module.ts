@@ -4,6 +4,10 @@ import { DashboardLayoutComponent } from './layout/dashboard-layout/dashboard-la
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () => import('./modules/main/main.module').then(m => m.MainModule)
+  },
+  {
     path: 'dashboard',
     component: DashboardLayoutComponent,
     loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)
