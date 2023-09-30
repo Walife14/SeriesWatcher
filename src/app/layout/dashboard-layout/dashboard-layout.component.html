@@ -1,14 +1,58 @@
-<div class="w-full h-10 bg-gradient-to-b from-blue-900 to-blue-400 px-4 flex justify-between items-center">
-    <div class="space-x-4 flex items-center h-full">
-        <div>
-            <div class="hamburger-slab"></div>
-            <div class="hamburger-slab"></div>
-            <div class="hamburger-slab"></div>
+<div class="w-screen flex flex-col">
+    <div class="w-full h-10 bg-gradient-to-b from-blue-900 to-blue-400 px-4 flex justify-between items-center">
+        <div class="space-x-4 flex items-center h-full">
+            <div (click)="navOpen=!navOpen">
+                <div class="hamburger-slab"></div>
+                <div class="hamburger-slab"></div>
+                <div class="hamburger-slab"></div>
+            </div>
+            <img style="height:30px;" src="../../../assets/icons/SeriesWatcherLogo.png" alt="SeriesWatcher Logo">
         </div>
-        <img style="height:30px;" src="../../../assets/icons/SeriesWatcherLogo.png" alt="SeriesWatcher Logo">
+        <div>
+            <input class="border border-white placeholder-white rounded-none p-1 w-28 bg-blue-300" type="text" placeholder="Search">
+        </div>
     </div>
-    <div>
-        <input class="border border-white placeholder-white rounded-none p-1 w-28 bg-blue-300" type="text" placeholder="Search">
+    <div class="grid grid-cols-3 fixed h-fit w-full mt-10" *ngIf="navOpen">
+        <nav class="col-span-2 bg-blue-900 font-bold text-gray-300 overflow-y-scroll overflow-x-hidden">
+            <ul class="p-4 border-b border-gray-500">
+                <li>
+                    <div class="flex items-center">
+                        <img class="w-8" src="../../../assets/icons/UserIcon.png" alt="Lucas' Icon">
+                        <div class="flex flex-col ml-2">
+                            <span>Lucas</span>
+                            <span class="text-xs font-medium">Switch Profiles</span>
+                        </div>
+                    </div>
+                </li>
+                <li>Account</li>
+                <li>Help Centre</li>
+                <li>Sign out of SeriesWatcher</li>
+            </ul>
+            <ul class="p-4">
+                <li><a>Home</a></li>
+                <li><a>My List</a></li>
+                <li><a>Thrillers</a></li>
+                <li><a>Crime</a></li>
+                <li><a>Kids & Family</a></li>
+                <li><a>International FIlms & TV</a></li>
+                <li><a>Reality TV</a></li>
+                <li><a>Action</a></li>
+                <li><a>Anime</a></li>
+                <li><a>Comedies</a></li>
+                <li><a>Fantasy</a></li>
+                <li><a>Sci-Fi</a></li>
+                <li><a>Horror</a></li>
+                <li><a>Stand-up Comedy</a></li>
+                <li><a>Documentaries</a></li>
+                <li><a>European Films & TV</a></li>
+                <li><a>Music & Musicals</a></li>
+                <li><a>Romance</a></li>
+                <li><a>Dramas</a></li>
+                <li><a>British Movies & TV</a></li>
+            </ul>
+        </nav>
+        <div class="col-span-1 bg-black/20" (click)="navOpen=false"></div>
     </div>
 </div>
+
 <router-outlet></router-outlet>

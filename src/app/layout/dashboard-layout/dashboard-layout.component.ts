@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardLayoutComponent implements OnInit {
 
+  navOpen: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onScroll(event: any) {
+    this.navOpen = false;
+  }
+
+  // Added this so that when a user scrolls whilst navbar open the navbar collapses
+  @HostListener('document:scroll', ['$event'])
+  public onViewportScroll() {
+    this.navOpen = false;
+  }
 }
