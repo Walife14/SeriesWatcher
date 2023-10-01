@@ -1,3 +1,37 @@
-<p>
-  sign works!
-</p>
+<div class="text-white min-h-screen bg-slate-500/50 flex flex-col">
+  <div class="h-16 mx-4 pt-4">
+    <a routerLink="/">
+      <img class="h-full" src="../../../../../assets/icons/SeriesWatcherLogo.png" alt="SeriesWatcher Logo">
+    </a>
+  </div>
+  <div class="mx-4 mt-8">
+    <h1 class="text-3xl font-semibold">Sign In</h1>
+    <form class="flex flex-col items-start space-y-4 mt-8">
+      <input class="py-3 px-4 w-full rounded-md text-black" type="text" placeholder="Email or phone number">
+      <input class="py-3 px-4 w-full rounded-md text-black" type="password" placeholder="Password">
+      <button class="bg-red-600 w-full py-3 font-semibold rounded-md" routerLink="/dashboard/user-selection" type="button">Sign In</button>
+    </form>
+    <div class="text-sm my-4 flex justify-between">
+      <label class="flex">
+        <input class="w-5 mr-2" type="checkbox" id="rememberMe" name="rememberMe" />
+        Remember me
+      </label>
+      <a>Need help?</a>
+    </div>
+    <div class="my-4 text-lg">New to SeriesWatcher? <a class="font-semibold">Sign up now.</a></div>
+    <span class="text-sm">This page is protected by Google reCAPTCHA to ensure you're not a bot. <a class="text-blue-700">Learn more.</a></span>
+  </div>
+  <div class="border-t border-gray-200 pt-8 px-4 mt-auto text-gray-100">
+    <span>Questions? Call <a class="underline">0000 000 0000</a></span>
+    <ul class="grid grid-cols-2 my-8">
+      <li><a class="underline">FAQ</a></li>
+      <li><a class="underline">Help Centre</a></li>
+      <li><a class="underline">SeriesWatcher Shop</a></li>
+      <li><a class="underline">Terms of Use</a></li>
+      <li><a class="underline">Privacy</a></li>
+      <li><a class="underline">Cookie Preferences</a></li>
+      <li><a class="underline">Corporate Information</a></li>
+      <li><a class="underline">Advert choices</a></li>
+    </ul>
+  </div>
+</div>
