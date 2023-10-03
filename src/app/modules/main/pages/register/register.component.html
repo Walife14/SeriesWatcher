@@ -1,0 +1,172 @@
+<div class="mx-4 flex items-center justify-between">
+  <a routerLink="/">
+    <img class="h-16" src="../../../../../assets/icons/SeriesWatcherLogo.png" alt="SeriesWatcher logo">
+  </a>
+  <a class="font-medium p-2" href="/login">Sign In</a>
+</div>
+<div class="bg-blue-200 w-10/12 px-4 py-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+  
+  <div class="underline absolute top-0 left-0 mt-2 ml-4" (click)="previousStage()" *ngIf="stage != 0">Back</div>
+  <!-- Sign Up Process -->
+  <!-- Part 1 -->
+  <div *ngIf="stage === 0">
+    <img class="h-24 mx-auto" src="../../../../../assets/icons/devicesimg.png" alt="Devices Image">
+    <span class="text-sm">STEP <b>1</b> OF <b>3</b></span>
+    <h1 class="text-3xl font-semibold my-4">Finish setting up your account</h1>
+    <div class="font-medium text-md">SeriesWatcher is personalised for you.<br>Create a password to start watching SeriesWatcher.</div>
+    <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md mt-4" type="button" (click)="nextStage()">Next</button>
+  </div>
+  <div *ngIf="stage === 1">
+    <span class="text-sm">STEP <b>1</b> OF <b>3</b></span>
+    <h1 class="text-3xl font-semibold my-4">Create a password to start your membership</h1>
+    <div class="font-medium">Just a few more steps and you're finished!
+      <br>
+      We hate paperwork, too.
+    </div>
+    <div class="py-4 space-y-2">
+      <input class="placeholder:text-black p-2 w-full rounded-md border border-black focus:outline-none focus:border-red-700" type="text" placeholder="Email">
+      <input class="placeholder:text-black p-2 w-full rounded-md border border-black focus:outline-none focus:border-red-700" type="text" placeholder="Password">
+      <label class="flex font-medium">
+        <input class="w-6 h-6 mr-2" type="checkbox">
+        Please do not email me SeriesWatcher special offers.
+      </label>
+    </div>
+    <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md mt-4" type="button" (click)="nextStage()">Next</button>
+  </div>
+  <!-- Part 2 -->
+  <div *ngIf="stage === 2">
+    <div>
+      <img class="h-16" src="../../../../../assets/icons/progresstick.png" alt="Progress Tick">
+    </div>
+    <div>
+      <span class="text-sm">STEP <b>2</b> OF <b>3</b></span>
+      <h1 class="text-3xl font-semibold mb-4">Choose your plan.</h1>
+    </div>
+    <ul>
+      <li class="flex font-medium">
+        <img class="h-16" src="../../../../../assets/icons/tick.png" alt="Tick image">
+        <span>No commitments, cancel at any time.</span>
+      </li>
+      <li class="flex font-medium">
+        <img class="h-16" src="../../../../../assets/icons/tick.png" alt="Tick image">
+        <span>Endless entertainment for one low price.</span>
+      </li>
+      <li class="flex font-medium">
+        <img class="h-16" src="../../../../../assets/icons/tick.png" alt="Tick image">
+        <span>Enjoy SeriesWatcher on all your devices.</span>
+      </li>
+    </ul>
+    <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md mt-4" type="button" (click)="nextStage()">Next</button>
+  </div>
+  <div *ngIf="stage === 3">
+    <span class="text-sm">STEP <b>2</b> OF <b>3</b></span>
+    <h1 class="text-3xl font-semibold">Choose the plan that's right for you</h1>
+    <ul>
+      <li class="flex items-center font-medium">
+        <img class="h-12" src="../../../../../assets/icons/tick.png" alt="Tick image">
+        <span>Watch all you want.</span>
+      </li>
+      <li class="flex items-center font-medium">
+        <img class="h-12" src="../../../../../assets/icons/tick.png" alt="Tick image">
+        <span>Recommendations just for you.</span>
+      </li>
+      <li class="flex items-center font-medium">
+        <img class="h-12" src="../../../../../assets/icons/tick.png" alt="Tick image">
+        <span>Change or cancel your plan at any time.</span>
+      </li>
+    </ul>
+    <ul class="my-4 text-center">
+      <li class="grid grid-cols-3 gap-1 text-white font-semibold mb-4">
+        <span class="bg-red-500 grid place-items-center h-24 p-2">Standard with adverts</span>
+        <span class="bg-red-500 grid place-items-center h-24 p-2">Standard</span>
+        <span class="bg-red-500 grid place-items-center h-24 p-2">Premium</span>
+      </li>
+      <li class="border-b border-gray-500 py-2">
+        <div class="text-sm">Monthly price</div>
+        <div class="grid grid-cols-3 font-semibold">
+          <span>£4.99</span>
+          <span>£10.99</span>
+          <span>£15.99</span>
+        </div>
+      </li>
+      <li class="border-b border-gray-500 py-2">
+        <div class="text-sm">Video and sound quality</div>
+        <div class="grid grid-cols-3 font-semibold">
+          <span>Good</span>
+          <span>Good</span>
+          <span>Best</span>
+        </div>
+      </li>
+      <li class="border-b border-gray-500 py-2">
+        <div class="text-sm">Resolution</div>
+        <div class="grid grid-cols-3 font-semibold">
+          <span>1080p</span>
+          <span>1080p</span>
+          <span>4K+HDR</span>
+        </div>
+      </li>
+      <li class="border-b border-gray-500 py-2">
+        <div class="text-sm">Watch on your TV, computer, mobile phone and tablet</div>
+        <div class="grid grid-cols-3 place-items-center font-semibold">
+          <span><img class="h-14" src="../../../../../assets/icons/tick.png" alt="Tick image"></span>
+          <span><img class="h-14" src="../../../../../assets/icons/tick.png" alt="Tick image"></span>
+          <span><img class="h-14" src="../../../../../assets/icons/tick.png" alt="Tick image"></span>
+        </div>
+      </li>
+      <li class="py-2">
+        <div class="text-sm">Downloads</div>
+        <div class="grid grid-cols-3 place-items-center font-semibold">
+          <span><img class="h-14" src="../../../../../assets/icons/line.png" alt="Tick image"></span>
+          <span><img class="h-14" src="../../../../../assets/icons/tick.png" alt="Tick image"></span>
+          <span><img class="h-14" src="../../../../../assets/icons/tick.png" alt="Tick image"></span>
+        </div>
+      </li>
+    </ul>
+    <div class="bg-gray-200 flex items-center p-2">
+      <img class="h-4 mr-2" src="../../../../../assets/icons/lock.png" alt="Image of a lock">
+      <span class="text-sm">An advert-supported plan includes a few differences. <a class="underline">Learn how it works.</a></span>
+    </div>
+    <div>
+      <p>If you select an advert-supported plan, you will be required to provide your date of birth for advert personalisation and other purposes consistent with the SeriesWatcher <a class="underline">Privacy Statement.</a></p>
+      <br>
+      <p>Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See <a class="underline">Terms of Use</a> for more details.</p>
+      <br>
+      <p>Only people who live with you may use your account. Add 1 extra member with Standard or up to 2 with Premium. <a class="underline">Learn more.</a> Watch on 4 different devices at the same time with Premium and 2 with Standard or Standard with adverts.</p>
+    </div>
+    <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md mt-4" type="button" (click)="nextStage()">Next</button>
+  </div>
+  <!-- Part 3 -->
+  <div *ngIf="stage === 4">
+    <img class="h-12 mb-8" src="../../../../../assets/icons/roundedLock.png" alt="Image of a lock">
+    <span class="text-sm">STEP <b>3</b> OF <b>3</b></span>
+    <h1 class="text-3xl font-semibold mb-4">Choose how to pay</h1>
+    <div>
+      <span class="font-medium">Your payment is encrypted and you can change how you pay at any time.</span>
+      <br><br>
+      <span class="font-semibold">Secure for peace of mind.</span>
+      <br>
+      <span class="font-semibold">Cancel easily online.</span>
+    </div>
+    <ul class="mt-4">
+      <li class="text-right"><span class="text-xs mr-2">End-to-end encrypted</span></li>
+      <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1">
+        Credit or Debit Card
+        <img class="h-6" src="../../../../../assets/icons/VISA_Logo.png" alt="Visa Logo">
+        <img class="h-6" src="../../../../../assets/icons/Mastercard_Logo.png" alt="Mastercard Logo">
+      </a></li>
+      <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1">
+        Add to mobile bill
+        <img class="h-6" src="../../../../../assets/icons/EE_Logo.jpg" alt="EE mobile Logo">
+        <img class="h-6" src="../../../../../assets/icons/Three_Mobile_Logo.jpg" alt="Three mobile Logo">
+      </a></li>
+      <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1">
+        PayPal
+        <img class="h-6" src="../../../../../assets/icons/paypal_logo.png" alt="PayPal Logo">
+      </a></li>
+      <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1">
+        Gift Code
+        <img class="h-6" src="../../../../../assets/icons/SeriesWatcherLogo.png" alt="SeriesWatcher Logo">
+      </a></li>
+    </ul>
+  </div>
+</div>
