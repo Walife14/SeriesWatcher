@@ -1,39 +1,21 @@
-<div class="w-full h-screen bg-blue-300 z-10 fixed top-0 left-0"></div>
+<div class="w-full h-screen bg-blueberry z-10 fixed top-0 left-0"></div>
 <div class="w-8/12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20">
-  <span class="text-3xl font-semibold">Who's Watching?</span>
-  <ul class="flex flex-wrap gap-2 justify-center mt-4 mb-8">
-    <li>
-      <a routerLink="/dashboard/">
-        <div class="flex flex-col items-center text-center">
-          <img class="max-w-xs rounded-md" src="../../../../../assets/icons/UserIcon.png" alt="Lucas' user icon">
-          <span class="text-gray-900">Lucas</span>
-        </div>
+  <span class="text-3xl text-gray-200 font-semibold">Who's Watching?</span>
+  <ul class="flex justify-center flex-wrap gap-2 mt-4 mb-8">
+    <li class="w-[30%]" *ngFor="let user of usersOnAccount">
+      <a>
+        <img class="rounded-sm w-full" [src]="user.photoUrl" [alt]="user.name + 's profile icon'">
+        <span class="text-gray-400 text-sm">{{ user.name }}</span>
       </a>
     </li>
-    <li>
-      <a routerLink="/dashboard/">
-        <div class="flex flex-col items-center text-center">
-          <img class="max-w-xs rounded-md" src="../../../../../assets/icons/UserIcon.png" alt="Lucas' user icon">
-          <span class="text-gray-900">Lucas</span>
+    <li class="w-[30%]">
+      <a>
+        <div>
+          <img class="scale-50" src="../../../../../assets/icons/plus.svg" alt="Plus icon">
         </div>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/dashboard/">
-        <div class="flex flex-col items-center text-center">
-          <img class="max-w-xs rounded-md" src="../../../../../assets/icons/UserIcon.png" alt="Lucas' user icon">
-          <span class="text-gray-900">Lucas</span>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/dashboard/">
-        <div class="flex flex-col items-center text-center">
-          <img class="max-w-xs" src="../../../../../assets/icons/add-icon.png" alt="Lucas' user icon">
-          <span class="text-gray-900">Add Profile</span>
-        </div>
+        <span class="text-gray-400 text-sm">Add Profile</span>
       </a>
     </li>
   </ul>
-  <a class="border py-1 px-2 mt-2">Manage Profiles</a>
+  <a class="border-gray-400 border py-1 px-4 mt-2 text-gray-400 text-sm">Manage Profiles</a>
 </div>
