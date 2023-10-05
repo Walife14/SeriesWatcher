@@ -4,8 +4,14 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blueberry: '#00000a'
+      },
+      backgroundImage: {
+        'landing-header': "url('/assets/icons/seriesdistorted2.png')"
+      }
+    },
   },
   plugins: [],
 }
-
