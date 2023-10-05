@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blueberry: '#00000a'
+        'dark-grey': '#2a2727',
+        'blueberry': '#00000a'
       },
       backgroundImage: {
         'landing-header': "url('/assets/icons/seriesdistorted2.png')"

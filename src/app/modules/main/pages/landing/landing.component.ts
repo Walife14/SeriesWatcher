@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  display1: boolean = false;
-  display2: boolean = false;
-  display3: boolean = false;
-  display4: boolean = false;
-  display5: boolean = false;
-  display6: boolean = false;
+  faqaria1: boolean = false;
+  faqaria2: boolean = false;
+  faqaria3: boolean = false;
+  faqaria4: boolean = false;
+  faqaria5: boolean = false;
+  faqaria6: boolean = false;
 
   constructor() { }
 
