@@ -2,8 +2,8 @@
   <div class="overflow-x-scroll" *ngFor="let title of titles">
     <span class="text-gray-200 text-xl font-bold">{{ title }}</span>
     <ul class="overflow-x-scroll whitespace-nowrap space-x-1 pr-2">
-      <li *ngFor="let film of films" class="inline-block">
-        <img src="../../../../../assets/film-images/spiderman-film.png" [alt]="'Image of ' + film.title">
+      <li *ngFor="let f of titles" class="inline-block">
+        <img src="../../../../../assets/film-images/spiderman-film.png" [alt]="'Image of '">
       </li>
     </ul>
   </div>
