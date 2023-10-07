@@ -1,5 +1,5 @@
 <div class="w-screen flex flex-col">
-    <div [ngClass]="navOpen == true ? 'bg-blue-900' : 'bg-gradient-to-b from-blue-900 to-blue-400'" class="w-full h-10  px-4 flex justify-between items-center">
+    <div [ngClass]="navOpen == true ? 'bg-blueberry' : 'bg-gradient-to-b from-blueberry to-dark-grey'" class="h-10 px-4 flex justify-between items-center ">
         <div class="space-x-4 flex items-center h-full">
             <div (click)="navOpen=!navOpen">
                 <div class="hamburger-slab"></div>
@@ -7,16 +7,18 @@
                 <div class="hamburger-slab"></div>
             </div>
             <a routerLink="/dashboard/">
-                <img style="height:30px;" src="../../../assets/icons/SeriesWatcherLogo.png" alt="SeriesWatcher Logo">
+                <img class="h-4" src="../../../assets/icons/SeriesWatcherLogoWhite.png" alt="SeriesWatcher Logo">
             </a>
         </div>
         <div>
-            <input class="border border-white placeholder-white rounded-none p-1 w-28 bg-blue-300" type="text" placeholder="Search">
+            <input class="border border-gray-400 placeholder-gray-400 rounded-none p-1 w-28 bg-dark-grey" type="text" placeholder="Search">
         </div>
     </div>
-    <div class="grid grid-cols-3 fixed h-fit w-full mt-10" *ngIf="navOpen">
-        <nav class="col-span-2 bg-blue-900 font-bold text-gray-300 overflow-y-scroll overflow-x-hidden">
-            <ul class="p-4 border-b border-gray-500">
+    <!-- <div class="grid grid-cols-3 fixed h-[100svh] w-full mt-10" *ngIf="navOpen">
+        <nav class="col-span-2 bg-blueberry font-bold text-gray-300 overflow-y-scroll pb-28" [ngClass]="navOpen ? 'max-w-xl' : ''"> -->
+    <div class="flex fixed h-[100svh] w-full mt-10 transition-all max-w-0" [ngClass]="navOpen ? 'max-w-full' : ''">
+        <nav class="bg-blueberry font-bold text-gray-300 overflow-y-scroll pb-28 w-3/5">
+            <ul class="p-4 border-b border-dark-grey">
                 <li>
                     <a routerLink="user-selection" (click)="navOpen=false" class="flex items-center hover:text-white focus:text-white">
                         <img class="w-8" src="../../../assets/icons/UserIcon.png" alt="Lucas' Icon">
@@ -31,7 +33,7 @@
                 <li><a routerLink="/" class="hover:text-white focus:text-white">Sign out of SeriesWatcher</a></li>
             </ul>
             <ul class="p-4">
-                <li><a routerLink="/" class="hover:text-white focus:text-white">Home</a></li>
+                <li><a routerLink="/dashboard/" class="hover:text-white focus:text-white">Home</a></li>
                 <li><a class="hover:text-white focus:text-white">My List</a></li>
                 <li><a class="hover:text-white focus:text-white">Thrillers</a></li>
                 <li><a class="hover:text-white focus:text-white">Crime</a></li>
@@ -53,7 +55,7 @@
                 <li><a class="hover:text-white focus:text-white">British Movies & TV</a></li>
             </ul>
         </nav>
-        <div class="col-span-1 bg-black/20" (click)="navOpen=false"></div>
+        <div class="bg-black/20 w-2/5" (click)="navOpen=false"></div>
     </div>
 </div>
 

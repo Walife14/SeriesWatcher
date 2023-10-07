@@ -1,0 +1,14 @@
+{
+    "films": [
+        { "id": 1, "title": "spiderman", "photoUrl": "thePhotoUrl.com" },
+        { "id": 2, "title": "snowman", "photoUrl": "thePhotoUrl.com"},
+        { "id": 3, "title": "spiderman2", "photoUrl": "thePhotoUrl.com"},
+        { "id": 4, "title": "spiderman3", "photoUrl": "thePhotoUrl.com"},
+        { "id": 5, "title": "spiderman4", "photoUrl": "thePhotoUrl.com"},
+        { "id": 6, "title": "spiderman5", "photoUrl": "thePhotoUrl.com"},
+        { "id": 7, "title": "spiderman6", "photoUrl": "thePhotoUrl.com"},
+        { "id": 8, "title": "spiderman7", "photoUrl": "thePhotoUrl.com"},
+        { "id": 9, "title": "spiderman8", "photoUrl": "thePhotoUrl.com"},
+        { "id": 10, "title": "spiderman9", "photoUrl": "thePhotoUrl.com"}
+    ]
+}
