@@ -17,7 +17,7 @@
     <!-- <div class="grid grid-cols-3 fixed h-[100svh] w-full mt-10" *ngIf="navOpen">
         <nav class="col-span-2 bg-blueberry font-bold text-gray-300 overflow-y-scroll pb-28" [ngClass]="navOpen ? 'max-w-xl' : ''"> -->
     <div class="flex fixed h-[100svh] w-full mt-10 transition-all max-w-0" [ngClass]="navOpen ? 'max-w-full' : ''">
-        <nav class="bg-blueberry font-bold text-gray-300 overflow-y-scroll pb-28 w-3/5">
+        <nav class="bg-blueberry font-bold text-gray-300 overflow-y-scroll pb-28 w-3/5 whitespace-nowrap">
             <ul class="p-4 border-b border-dark-grey">
                 <li>
                     <a routerLink="user-selection" (click)="navOpen=false" class="flex items-center hover:text-white focus:text-white">

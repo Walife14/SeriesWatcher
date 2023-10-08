@@ -1,7 +1,7 @@
 <div>
   <div class="pl-4 pt-4 bg-blueberry">
     <div class="overflow-x-scroll" *ngFor="let title of titles">
-      <span class="text-gray-200 text-xl font-bold">{{ title }}</span>
+      <div class="text-gray-200 text-xl font-bold mb-0.5">{{ title }}</div>
       <ul class="overflow-x-scroll whitespace-nowrap space-x-1 pr-2">
         <li *ngFor="let f of titles" class="inline-block">
           <button type="button" (click)="hasSelectedFilm = true">
@@ -11,13 +11,15 @@
       </ul>
     </div>
   </div>
-  <app-film-open *ngIf="hasSelectedFilm"></app-film-open>
-  <button 
+  <button
     *ngIf="hasSelectedFilm"
-    class="fixed top-0 left-0 h-10 w-screen bg-gray-700/75 text-white flex justify-center items-center text-xl" type="button"
+    class="fixed top-0 left-0 h-[100svh] w-screen bg-gray-700/75 text-white text-xl z-0" type="button"
     (click)="closeFilm()"
-    >Close
+    ><span class="absolute top-0 -translate-x-1/2 leading-10">Close</span>
   </button>
+  <div class="z-10">
+    <app-film-open *ngIf="hasSelectedFilm"></app-film-open>
+  </div>
   <div class="bg-blueberry">
     <ul class="flex p-4 text-center text-gray-200">
       <li>Terms of Use</li>

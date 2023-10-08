@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   films: filmInterface[] = []
   titles: String[] = ['Made in the UK', 'Continue watching for Lucas', 'Trending Now', 'Popular on SeriesWatcher', 'Gangster TV Dramas', 'Action & Adventure', 'My List', 'Only on SeriesWatcher', 'Binge-worthy' ]
 
-  hasSelectedFilm: boolean = true;
+  hasSelectedFilm: boolean = false;
 
   constructor(private filmService: FilmService) {}
 
