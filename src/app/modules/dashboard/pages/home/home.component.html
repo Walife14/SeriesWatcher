@@ -1,18 +1,29 @@
-<div class="pl-4 pt-4 bg-blueberry">
-  <div class="overflow-x-scroll" *ngFor="let title of titles">
-    <span class="text-gray-200 text-xl font-bold">{{ title }}</span>
-    <ul class="overflow-x-scroll whitespace-nowrap space-x-1 pr-2">
-      <li *ngFor="let f of titles" class="inline-block">
-        <img src="../../../../../assets/film-images/spiderman-film.png" [alt]="'Image of '">
-      </li>
+<div>
+  <div class="pl-4 pt-4 bg-blueberry">
+    <div class="overflow-x-scroll" *ngFor="let title of titles">
+      <span class="text-gray-200 text-xl font-bold">{{ title }}</span>
+      <ul class="overflow-x-scroll whitespace-nowrap space-x-1 pr-2">
+        <li *ngFor="let f of titles" class="inline-block">
+          <button type="button" (click)="hasSelectedFilm = true">
+            <img src="../../../../../assets/film-images/spiderman-film.png" [alt]="'Image of '">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <app-film-open *ngIf="hasSelectedFilm"></app-film-open>
+  <button 
+    *ngIf="hasSelectedFilm"
+    class="fixed top-0 left-0 h-10 w-screen bg-gray-700/75 text-white flex justify-center items-center text-xl" type="button"
+    (click)="closeFilm()"
+    >Close
+  </button>
+  <div class="bg-blueberry">
+    <ul class="flex p-4 text-center text-gray-200">
+      <li>Terms of Use</li>
+      <li>Privacy Statement</li>
+      <li>Cookie preferences</li>
+      <li>Help Centre</li>
     </ul>
   </div>
-</div>
-<div class="bg-blueberry">
-  <ul class="flex p-4 text-center text-gray-200">
-    <li>Terms of Use</li>
-    <li>Privacy Statement</li>
-    <li>Cookie preferences</li>
-    <li>Help Centre</li>
-  </ul>
 </div>

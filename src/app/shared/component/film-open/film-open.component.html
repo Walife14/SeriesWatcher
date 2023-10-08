@@ -1,0 +1,25 @@
+<div class="fixed top-0 left-0 mt-10 h-[100svh] w-screen bg-blueberry overflow-y-scroll text-gray-200">
+  <div class="relative">
+    <img class="w-full" src="../../../../assets/film-images/snowman-film.png" alt="Snowman Film">
+    <div class="absolute bottom-4 left-4">
+      <button class="bg-red-700 px-4 py-1 mr-2 text-white font-semibold tracking-wider" type="button">Play</button>
+      <button class="bg-gray-700/75 px-2 py-1 rounded-md" type="button">More Info</button>
+    </div>
+  </div>
+  <p class="p-4">This is a series about a very tall creature that lives in the middle of the forest, that must escape society in order to survive. Experience the creature Albert's adventures and hardships.</p>
+  <div class="mx-4">
+    <div class="font-semibold text-xl mb-1">Season 1</div>
+    <ul class="space-y-2 mb-20">
+      <li *ngFor="let episode of episodes" class="grid grid-cols-3">
+        <img class="col-span-1 pr-2" src="../../../../assets/film-images/snowman-film.png" [alt]="'image of ' + episode.title + ' episode ' + episode.episode">
+        <div class="col-span-2">
+          <div class="flex justify-between font-semibold text-sm">
+            <span>{{ episode.title }}</span>
+            <span>{{ episode.duration }}m</span>
+          </div>
+          <p class="text-xs">{{ episode.description }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
