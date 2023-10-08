@@ -7,7 +7,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class DashboardLayoutComponent implements OnInit {
 
-  navOpen: boolean = true;
+  navOpen: boolean = false;
 
   constructor() { }
 
