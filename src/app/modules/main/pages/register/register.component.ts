@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   stage: number = 0;
+
   paymentOption: number = 0;
 
   constructor() { }
