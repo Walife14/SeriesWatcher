@@ -1,11 +1,11 @@
 <div>
   <div class="pl-4 pt-4 bg-blueberry">
     <div class="overflow-x-scroll" *ngFor="let title of titles">
-      <div class="text-gray-200 text-xl font-bold mb-0.5">{{ title }}</div>
+      <div class="text-gray-200 text-xl font-semibold mb-0.5">{{ title }}</div>
       <ul class="overflow-x-scroll whitespace-nowrap space-x-1 pr-2">
         <li *ngFor="let f of titles" class="inline-block">
           <button type="button" (click)="hasSelectedFilm = true">
-            <img src="../../../../../assets/film-images/spiderman-film.png" [alt]="'Image of '">
+            <img class="md:h-44" src="../../../../../assets/film-images/spiderman-film.png" [alt]="'Image of '">
           </button>
         </li>
       </ul>
