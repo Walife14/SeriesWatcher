@@ -2,13 +2,13 @@
 <div class="w-8/12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20">
   <span class="text-3xl text-gray-200 font-semibold">Who's Watching?</span>
   <ul class="flex justify-center flex-wrap gap-2 mt-4 mb-8">
-    <li class="w-[30%]" *ngFor="let user of usersOnAccount">
+    <li class="w-[30%] md:w-1/6" *ngFor="let user of usersOnAccount">
       <a routerLink="/dashboard">
         <img class="rounded-sm w-full" [src]="user.photoUrl" [alt]="user.name + 's profile icon'">
         <span class="text-gray-400 text-sm">{{ user.name }}</span>
       </a>
     </li>
-    <li class="w-[30%]">
+    <li class="w-[30%] md:w-1/6">
       <a>
         <div>
           <img class="scale-50" src="../../../../../assets/icons/plus.svg" alt="Plus icon">
