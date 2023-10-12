@@ -1,21 +1,21 @@
 <div class="w-full h-screen bg-blueberry z-10 fixed top-0 left-0"></div>
 <div class="w-8/12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20">
-  <span class="text-3xl text-gray-200 font-semibold">Who's Watching?</span>
-  <ul class="flex justify-center flex-wrap gap-2 mt-4 mb-8">
+  <h1 class="text-3xl text-gray-200 font-semibold lg:text-6xl lg:mb-10">Who's Watching?</h1>
+  <ul class="flex justify-center flex-wrap gap-2 mt-4 mb-8 lg:gap-8 lg:mb-20">
     <li class="w-[30%] md:w-1/6" *ngFor="let user of usersOnAccount">
       <a routerLink="/dashboard">
-        <img class="rounded-sm w-full" [src]="user.photoUrl" [alt]="user.name + 's profile icon'">
-        <span class="text-gray-400 text-sm">{{ user.name }}</span>
+        <img class="rounded-sm w-full lg:mb-4 lg:rounded-md" [src]="user.photoUrl" [alt]="user.name + 's profile icon'">
+        <span class="text-gray-400 text-sm lg:text-base lg:font-semibold">{{ user.name }}</span>
       </a>
     </li>
     <li class="w-[30%] md:w-1/6">
       <a>
         <div>
-          <img class="scale-50" src="../../../../../assets/icons/plus.svg" alt="Plus icon">
+          <img class="lg:mb-4 lg:rounded-md hover:bg-gray-200 hover:cursor-pointer" src="../../../../../assets/icons/plus.svg" alt="Plus icon">
         </div>
-        <span class="text-gray-400 text-sm">Add Profile</span>
+        <span class="text-gray-400 text-sm lg:text-base lg:font-semibold">Add Profile</span>
       </a>
     </li>
   </ul>
-  <a class="border-gray-400 border py-1 px-4 mt-2 text-gray-400 text-sm">Manage Profiles</a>
+  <a class="border-gray-400 border py-1 px-4 text-gray-400 text-sm lg:text-base lg:py-2 lg:px-6">Manage Profiles</a>
 </div>
