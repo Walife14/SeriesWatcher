@@ -1,21 +1,21 @@
 <div class="min-h-screen flex flex-col">
-  <div class="px-4 flex items-center justify-between border-b border-gray-200 md:py-5">
+  <div class="px-4 flex items-center justify-between border-b border-gray-200 md:py-5 lg:px-20">
     <a routerLink="/">
-      <img class="h-6 md:h-8" src="../../../../../assets/icons/SeriesWatcherLogo.png" alt="SeriesWatcher logo">
+      <img class="h-6 md:h-8 lg:h-10" src="../../../../../assets/icons/SeriesWatcherLogo.png" alt="SeriesWatcher logo">
     </a>
     <a class="font-medium p-2" href="/login">Sign In</a>
   </div>
   <div class="px-8 mt-8 mb-20">
     <!-- Sign Up Process -->
     <!-- Part 1 -->
-    <div *ngIf="stage === 0" class="mt-20 md:max-w-[50%] md:mx-auto md:mt-32 md:text-center">
+    <div *ngIf="stage === 0" class="mt-20 md:max-w-[50%] md:mx-auto md:mt-32 md:text-center lg:max-w-[20%] lg:mt-20">
       <img class="h-24 mx-auto mb-8" src="../../../../../assets/icons/multipledevicesimg.png" alt="Devices Image">
       <span class="text-sm">STEP <b>1</b> OF <b>3</b></span>
       <h1 class="text-3xl font-semibold mb-4">Finish setting up your account</h1>
       <div class="text-md">SeriesWatcher is personalised for you.<br>Create a password to start watching SeriesWatcher.</div>
       <button class="bg-red-600 text-white font-medium text-2xl py-4 w-full rounded-md mt-4" type="button" (click)="nextStage()">Next</button>
     </div>
-    <div *ngIf="stage === 1" class="md:mt-10 md:max-w-[60%] md:mx-auto">
+    <div *ngIf="stage === 1" class="md:mt-10 md:max-w-[60%] md:mx-auto lg:max-w-[25%]">
       <span class="text-sm">STEP <b>1</b> OF <b>3</b></span>
       <h1 class="text-3xl font-semibold mb-4">Create a password to start your membership</h1>
       <div>Just a few more steps and you're finished!
@@ -33,7 +33,7 @@
       <button class="bg-red-600 text-white font-medium text-2xl py-4 w-full rounded-md mt-4" type="button" (click)="nextStage()">Next</button>
     </div>
     <!-- Part 2 -->
-    <div *ngIf="stage === 2" class="mt-20 md:max-w-[50%] md:mx-auto">
+    <div *ngIf="stage === 2" class="mt-20 md:max-w-[50%] md:mx-auto  lg:max-w-[20%] lg:mt-20">
         <img class="h-10 md:mx-auto" src="../../../../../assets/icons/progresstick.png" alt="Progress Tick">
       <div class="my-4 md:text-center">
         <span class="text-sm">STEP <b>2</b> OF <b>3</b></span>
@@ -55,7 +55,7 @@
       </ul>
       <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md mt-8" type="button" (click)="nextStage()">Next</button>
     </div>
-    <div *ngIf="stage === 3">
+    <div *ngIf="stage === 3" class="lg:w-3/6 lg:mx-auto">
       <span class="text-sm">STEP <b>2</b> OF <b>3</b></span>
       <h1 class="text-3xl font-semibold mb-4">Choose the plan that's right for you</h1>
       <ul class="flex flex-col gap-1">
@@ -137,10 +137,10 @@
         <br>
         <p>Only people who live with you may use your account. Add 1 extra member with Standard or up to 2 with Premium. <a class="underline">Learn more.</a> Watch on 4 different devices at the same time with Premium and 2 with Standard or Standard with adverts.</p>
       </div>
-      <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md mt-4 mb-10 md:mt-10 md:w-4/6 md:mx-auto md:flex md:justify-center" type="button" (click)="nextStage()">Next</button>
+      <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md mt-4 mb-10 md:mt-10 md:w-4/6 md:mx-auto md:flex md:justify-center lg:w-3/6" type="button" (click)="nextStage()">Next</button>
     </div>
     <!-- Part 3 -->
-    <div *ngIf="stage === 4" class="md:w-4/6 md:mx-auto">
+    <div *ngIf="stage === 4" class="md:w-4/6 md:mx-auto lg:w-[25%]">
       <div *ngIf="paymentOption === 0" class="md:text-center">
         <img class="h-12 mb-8 md:mx-auto" src="../../../../../assets/icons/roundedLock.png" alt="Image of a lock">
         <span class="text-sm">STEP <b>3</b> OF <b>3</b></span>
@@ -154,28 +154,28 @@
         </div>
         <ul class="mt-4">
           <li class="text-right"><span class="text-xs mr-2">End-to-end encrypted</span></li>
-          <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1" (click)="paymentOption = 1">
+          <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1 hover:cursor-pointer" (click)="paymentOption = 1">
             Credit or Debit Card
             <img class="h-6" src="../../../../../assets/icons/VISA_Logo.png" alt="Visa Logo">
             <img class="h-6" src="../../../../../assets/icons/Mastercard_Logo.png" alt="Mastercard Logo">
           </a></li>
-          <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1" (click)="paymentOption = 2">
+          <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1 hover:cursor-pointer" (click)="paymentOption = 2">
             Add to mobile bill
             <img class="h-6" src="../../../../../assets/icons/EE_Logo.jpg" alt="EE mobile Logo">
             <img class="h-6" src="../../../../../assets/icons/Three_Mobile_Logo.jpg" alt="Three mobile Logo">
           </a></li>
-          <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1" (click)="paymentOption = 3">
+          <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1 hover:cursor-pointer" (click)="paymentOption = 3">
             PayPal
             <img class="h-6" src="../../../../../assets/icons/paypal_logo.png" alt="PayPal Logo">
           </a></li>
-          <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1" (click)="paymentOption = 4">
+          <li><a class="flex gap-2 border-2 border-gray-500 rounded-md p-4 mb-1 hover:cursor-pointer" (click)="paymentOption = 4">
             Gift Code
             <img class="h-3 my-auto" src="../../../../../assets/icons/SeriesWatcherLogo.png" alt="SeriesWatcher Logo">
           </a></li>
         </ul>
       </div>
     </div>
-    <div *ngIf="paymentOption != 0" class="md:w-3/5 md:mx-auto">
+    <div *ngIf="paymentOption != 0" class="md:w-3/5 md:mx-auto lg:w-[25%]">
       <span class="text-sm">STEP <b>3</b> OF <b>3</b></span>
       <!-- credit or debit card payment -->
       <ng-container *ngIf="paymentOption === 1">
@@ -201,7 +201,7 @@
             <span class="font-medium">£15.99/month</span><br>
             <span>Premium</span>
           </div>
-          <a class="underline" (click)="paymentOption = 0">Change</a>
+          <a class="underline hover:cursor-pointer" (click)="paymentOption = 0">Change</a>
         </div>
         <p class="text-xs text-gray-600">By clicking the "Start Paid Membership" button below, you agree to our <a class="underline">Terms of Use</a> and that you are over 18 and acknowledge the <a>Privacy statement.</a> SeriesWatcher will automatically continue your membership and charge the membership fee (currently £15.99/month) to your payment method until you cancel. You may cancel at any time to avoid future charges.</p>
         <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md my-4" type="button" routerLink="/dashboard/user-selection">Start Paid Membership</button>
@@ -229,7 +229,7 @@
           <span class="font-medium">£15.99/month</span><br>
           <span>Premium</span>
         </div>
-        <a class="underline" (click)="paymentOption = 0">Change</a>
+        <a class="underline hover:cursor-pointer" (click)="paymentOption = 0">Change</a>
       </div>
       <p class="text-xs">By clicking the "Verify phone number" button below, you agree to our <a class="underline">Terms of Use</a> and that you are over 18 and acknowledge the <a class="underline">Privacy Statement.</a> SeriesWatcher will automatically continue your membership and charge the membership fee (currently £15.99/month) to your payment method until you cancel. You may cancel at any time to avoid future charges.</p>
       <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md my-4" type="button" routerLink="/dashboard/user-selection">Verify phone number</button>  
@@ -243,7 +243,7 @@
           <span class="font-medium">£15.99/month</span><br>
           <span>Premium</span>
         </div>
-        <a class="underline" (click)="paymentOption = 0">Change</a>
+        <a class="underline hover:cursor-pointer" (click)="paymentOption = 0">Change</a>
       </div>
       <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md my-4" type="button" routerLink="/dashboard/user-selection">Continue to PayPal</button>  
     </ng-container>
@@ -256,7 +256,7 @@
           <span class="font-medium">£15.99/month</span><br>
           <span>Premium</span>
         </div>
-        <a class="underline" (click)="paymentOption = 0">Change</a>
+        <a class="underline hover:cursor-pointer" (click)="paymentOption = 0">Change</a>
       </div>
       <button class="bg-red-600 text-white font-medium text-2xl py-3 w-full rounded-md my-4" type="button" routerLink="/dashboard/user-selection">Redeem gift code</button>
       <span class="text-xs">This page is protected by Google reCAPTCHA to ensure you're not a bot. <a class="underline">Learn more.</a></span>
@@ -264,9 +264,9 @@
     </div>
   </div>
   <!-- footer -->
-  <div class="px-4 pt-4 mt-auto pb-10 bg-gray-200/50 md:p-10">
+  <div class="px-4 pt-4 mt-auto pb-10 bg-gray-200/50 md:p-10 lg:px-20">
     <span class="block pb-4">Questions? Call <a class="underline">0000 000 0000</a></span>
-    <ul class="grid grid-cols-2 text-sm gap-y-2 md:grid-cols-4 md:grid-rows-2">
+    <ul class="grid grid-cols-2 text-sm gap-y-2 md:grid-cols-4 md:grid-rows-2 lg:w-4/6">
       <li><a>FAQ</a></li>
       <li><a>Help Centre</a></li>
       <li><a>SeriesWatcher Shop</a></li>
