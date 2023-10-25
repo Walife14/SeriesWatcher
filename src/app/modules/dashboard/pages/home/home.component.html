@@ -1,27 +1,24 @@
-<div>
-  <div class="pl-4 pt-4 bg-blueberry">
-    <div class="overflow-x-scroll" *ngFor="let title of titles">
-      <div class="text-gray-200 text-xl font-semibold mb-0.5">{{ title }}</div>
-      <ul class="overflow-x-scroll whitespace-nowrap space-x-1 pr-2">
-        <li *ngFor="let f of titles" class="inline-block">
-          <button type="button" (click)="hasSelectedFilm = true">
-            <img class="md:h-44" src="../../../../../assets/film-images/spiderman-film.png" [alt]="'Image of '">
-          </button>
-        </li>
-      </ul>
+<div class="text-gray-200">
+  <div class="pl-4 pt-4 bg-blueberry lg:pl-0">
+    <div class="mt-4 lg:py-5" *ngFor="let title of titles; index as i">
+      <app-film-carousel [title]="title" [titleId]="titleIds[i]" (dataToSend)="triggerFilmClick($event)"></app-film-carousel>
     </div>
   </div>
-  <button
-    *ngIf="hasSelectedFilm"
-    class="fixed top-0 left-0 h-[100svh] w-screen bg-gray-700/75 text-white text-xl z-0" type="button"
-    (click)="closeFilm()"
-    ><span class="absolute top-0 -translate-x-1/2 leading-10">Close</span>
-  </button>
-  <div class="z-10">
-    <app-film-open *ngIf="hasSelectedFilm"></app-film-open>
+  <!-- film open -->
+  <div>
+    <button
+      *ngIf="hasSelectedFilm"
+      class="fixed top-0 left-0 h-[100svh] w-screen bg-gray-700/75 text-white text-xl z-0" type="button"
+      (click)="closeFilm()"
+      ><span class="absolute top-0 -translate-x-1/2 leading-10">Close</span>
+    </button>
+    <div>
+      <app-film-open *ngIf="hasSelectedFilm"></app-film-open>
+    </div>
   </div>
+  <!-- footer -->
   <div class="bg-blueberry">
-    <ul class="flex p-4 text-center text-gray-200">
+    <ul class="flex p-4 text-center">
       <li>Terms of Use</li>
       <li>Privacy Statement</li>
       <li>Cookie preferences</li>

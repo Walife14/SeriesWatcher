@@ -1,0 +1,24 @@
+<div class="w-full text-gray-200 overflow-hidden">
+  <h2 class="text-gray-200 my-1 text-xl font-semibold lg:ml-[10%] pl-2 lg:my-4">{{ title }}</h2>
+  <div class="lg:w-[120%] lg:relative lg:-left-[10%]">
+    <div class="hidden lg:block w-1/6 absolute left-0 top-0 aspect-video px-2">
+      <button class="h-full w-full bg-dark-grey/75 flex items-center flex-row-reverse" type="button" (click)="moveCarousel('left')">
+        <img class="h-10 w-10 invert" src="../../../../assets/icons/chevron-left.svg">
+      </button>
+    </div>
+    <ul class="w-full flex overflow-x-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]" [id]="titleId">
+      <li class="hidden lg:block shrink-0 w-1/6 bg-blueberry z-10"></li>
+      <li class="shrink-0 w-2/4 md:w-2/5 lg:w-1/6" *ngFor="let item of items">
+        <button (click)="sendBackData(item.imgUrl)">
+          <img class="px-2 aspect-video rounded-md cursor-pointer" [src]="item.imgUrl" alt="">
+        </button>
+      </li>
+      <li class="hidden lg:block shrink-0 w-1/6 bg-blueberry z-10"></li>
+    </ul>
+    <div class="hidden lg:block w-1/6 absolute right-0 top-0 aspect-video px-2">
+      <button class="h-full w-full bg-dark-grey/75 flex items-center" type="button" (click)="moveCarousel('right')">
+        <img class="h-10 w-10 invert" src="../../../../assets/icons/chevron-right.svg">
+      </button>
+    </div>
+  </div>
+</div>
